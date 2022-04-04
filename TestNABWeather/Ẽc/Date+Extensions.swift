@@ -2,7 +2,7 @@
 //  Date+Extensions.swift
 //  xGaming
 //
-//  Created by Linh Ta on 6/3/20.
+//  Created by tnu on 6/3/20.
 //
 
 import Foundation

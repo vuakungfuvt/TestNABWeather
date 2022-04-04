@@ -2,7 +2,7 @@
 //  Data+Extensions.swift
 //  xGaming
 //
-//  Created by Linh Ta on 6/19/20.
+//  Created by tnu on 6/19/20.
 //
 
 import Foundation
