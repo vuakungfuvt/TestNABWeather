@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (5.5.0)
+  - ESPullToRefresh (2.9.3)
+  - Kingfisher (5.13.4):
+    - Kingfisher/Core (= 5.13.4)
+  - Kingfisher/Core (5.13.4)
+  - MBProgressHUD (1.2.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
+  - Toast-Swift (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.0)
+  - ESPullToRefresh
+  - Kingfisher (~> 5.13.4)
+  - MBProgressHUD (~> 1.2)
+  - NVActivityIndicatorView
+  - Toast-Swift
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - ESPullToRefresh
+    - Kingfisher
+    - MBProgressHUD
+    - NVActivityIndicatorView
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  ESPullToRefresh: 0d68daa602b343c81753a1b95e09fd0bfcddfd40
+  Kingfisher: d2279a7abece3c7f25a80cd2b7f363ca5cf3f44c
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+
+PODFILE CHECKSUM: beb520a5b5c5e0fcf822c2fb7a6507b498abda72
+
+COCOAPODS: 1.11.2
