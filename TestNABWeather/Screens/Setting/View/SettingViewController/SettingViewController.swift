@@ -26,7 +26,7 @@ class SettingViewController: UIViewController, XibViewController {
     @IBOutlet weak var btnClose: UIButton!
     
     // MARK: - Variables
-    var viewModel = SettingViewModel()
+    fileprivate var viewModel = SettingViewModel()
     weak var delegate: SettingViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -34,6 +34,10 @@ class SettingViewController: UIViewController, XibViewController {
         
         setupView()
         initData()
+    }
+    
+    func setupViewModel(viewModel: SettingViewModel) {
+        self.viewModel = viewModel
     }
     
     override func viewDidAppear(_ animated: Bool) {

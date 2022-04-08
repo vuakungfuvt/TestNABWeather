@@ -1,9 +1,8 @@
 //
-//  UIView+Extension.swift
-//  F99_Shiper
+//  AlertCustomViewController.swift
+//  TestNABWeather
 //
-//  Created by Tnu on 9/3/20.
-//  Copyright © 2020 F99. All rights reserved.
+//  Created by tungphan on 02/04/2022.
 //
 
 import MBProgressHUD
@@ -266,7 +265,7 @@ extension UIViewController {
     func showError(errorContent: String) {
         let viewModel = AlertCustomViewModel(content: errorContent)
         AlertCustomViewController.present(from: self, animated: false) { vc in
-            vc.viewModel = viewModel
+            vc.setupViewModel(viewModel: viewModel)
             vc.modalPresentationStyle = .overFullScreen
         } completion: {
             

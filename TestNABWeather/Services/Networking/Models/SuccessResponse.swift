@@ -1,9 +1,8 @@
 //
-//  SuccessResponse.swift
-//  F99 - Shiper
+//  AlertCustomViewController.swift
+//  TestNABWeather
 //
-//  Created by Phùng Chịnh on 9/8/20.
-//  Copyright © 2020 F99. All rights reserved.
+//  Created by tungphan on 02/04/2022.
 //
 
 import Foundation

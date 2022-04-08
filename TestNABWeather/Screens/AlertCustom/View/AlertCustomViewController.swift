@@ -16,13 +16,17 @@ class AlertCustomViewController: UIViewController, XibViewController {
     
     // MARK: - Variables
     
-    var viewModel = AlertCustomViewModel(content: "")
+    private var viewModel = AlertCustomViewModel(content: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
         initData()
+    }
+    
+    func setupViewModel(viewModel: AlertCustomViewModel) {
+        self.viewModel = viewModel
     }
     
     override func viewDidAppear(_ animated: Bool) {

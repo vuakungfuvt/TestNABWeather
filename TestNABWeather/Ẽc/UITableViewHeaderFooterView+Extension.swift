@@ -1,9 +1,8 @@
 //
-//  UITableViewHeaderFooterView+Extension.swift
-//  GymCalendar
+//  AlertCustomViewController.swift
+//  TestNABWeather
 //
-//  Created by tnu on 2/19/19.
-//  Copyright © 2019 tnu. All rights reserved.
+//  Created by tungphan on 02/04/2022.
 //
 
 import UIKit

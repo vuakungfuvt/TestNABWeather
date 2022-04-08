@@ -1,9 +1,8 @@
 //
-//  UIImageView+Extension.swift
-//  HSBCBank
+//  AlertCustomViewController.swift
+//  TestNABWeather
 //
-//  Created by tung phan on 
-//  Copyright © 2021 tung phan. All rights reserved.
+//  Created by tungphan on 02/04/2022.
 //
 
 import UIKit

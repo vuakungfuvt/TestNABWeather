@@ -6,9 +6,7 @@ target 'TestNABWeather' do
   use_frameworks!
 	
 pod 'Kingfisher', '~> 5.13.4'
-pod 'Toast-Swift'
 pod 'MBProgressHUD', '~> 1.2'
-pod 'NVActivityIndicatorView'
 pod 'Alamofire', '~> 5.0'
 pod "ESPullToRefresh"
   # Pods for TestNABWeather

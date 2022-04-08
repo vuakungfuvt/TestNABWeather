@@ -1,9 +1,8 @@
 //
-//  BaseNibView.swift
-//  GymCalendar
+//  AlertCustomViewController.swift
+//  TestNABWeather
 //
-//  Created by MacBook Pro on 5/10/19.
-//  Copyright © 2019 TungPT - Tnu. All rights reserved.
+//  Created by tungphan on 02/04/2022.
 //
 
 import UIKit

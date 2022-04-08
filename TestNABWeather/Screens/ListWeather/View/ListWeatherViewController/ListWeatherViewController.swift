@@ -78,7 +78,7 @@ class ListWeatherViewController: UIViewController, XibViewController {
         SettingViewController.present(from: self, animated: false) { vc in
             vc.modalPresentationStyle = .overFullScreen
             vc.delegate = self
-            vc.viewModel = viewModel
+            vc.setupViewModel(viewModel: viewModel)
         } completion: {
             
         }
