@@ -34,6 +34,7 @@ class SettingViewController: UIViewController, XibViewController {
         
         setupView()
         initData()
+        bindViewModel()
     }
     
     func setupViewModel(viewModel: SettingViewModel) {
@@ -42,13 +43,34 @@ class SettingViewController: UIViewController, XibViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.view.layoutIfNeeded()
-        UIView.animate(withDuration: 0.5) {
-            self.widthContentViewConstraint.constant = screenSize.width - 60
-            self.view.layoutIfNeeded()
-        } completion: { _ in
-            
+        self.animateConstraint(constraint: widthContentViewConstraint, newValueConstrant: screenSize.width - 60, time: 0.5, completion: {})
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func btnCloseTouchUpInside(_ sender: Any) {
+        self.animateConstraint(constraint: self.widthContentViewConstraint, newValueConstrant: 100, time: 0.5) {
+            self.dismiss(animated: false, completion: {})
         }
+    }
+    
+    @IBAction func sliderValueChanged(_ sender: Any) {
+        viewModel.setTextSize(textSize: Int(sliderTextSize.value))
+        delegate?.didUpdateFontSize(fontSize: self.viewModel.setting?.fontSize ?? 0)
+    }
+}
+
+extension SettingViewController: NABViewControllerViewModel {
+    func bindViewModel() {
+        viewModel.didUpdateFontSize = {
+            self.lblCurrentTextSize.text = "Text size: \(self.viewModel.setting?.fontSize ?? 0)"
+        }
+    }
+    
+    func initData() {
+        countDayView.viewModel = viewModel.createCountDayViewModel()
+        tempTypeView.viewModel = viewModel.createTempTypeViewModel()
+        self.lblCurrentTextSize.text = "Text size: \(self.viewModel.setting?.fontSize ?? 0)"
     }
     
     func setupView() {
@@ -71,37 +93,5 @@ class SettingViewController: UIViewController, XibViewController {
             }
             self.delegate?.didUpdateTempUnit(tempUnit: UnitTemp(rawValue: value) ?? .Celsius)
         }
-    }
-    
-    func setupViewModel() {
-        viewModel.didUpdateFontSize = {
-            self.lblCurrentTextSize.text = "Text size: \(self.viewModel.setting?.fontSize ?? 0)"
-        }
-    }
-    
-    func initData() {
-        countDayView.viewModel = viewModel.createCountDayViewModel()
-        tempTypeView.viewModel = viewModel.createTempTypeViewModel()
-        self.lblCurrentTextSize.text = "Text size: \(self.viewModel.setting?.fontSize ?? 0)"
-        setupViewModel()
-    }
-    
-    // MARK: - Actions
-    
-    @IBAction func btnCloseTouchUpInside(_ sender: Any) {
-        self.view.layoutIfNeeded()
-        UIView.animate(withDuration: 0.5) {
-            self.widthContentViewConstraint.constant = 100
-            self.view.layoutIfNeeded()
-        } completion: { _ in
-            self.dismiss(animated: false) {
-                
-            }
-        }
-    }
-    
-    @IBAction func sliderValueChanged(_ sender: Any) {
-        viewModel.setTextSize(textSize: Int(sliderTextSize.value))
-        delegate?.didUpdateFontSize(fontSize: self.viewModel.setting?.fontSize ?? 0)
     }
 }

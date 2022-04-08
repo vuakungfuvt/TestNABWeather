@@ -9,6 +9,8 @@ pod 'Kingfisher', '~> 5.13.4'
 pod 'MBProgressHUD', '~> 1.2'
 pod 'Alamofire', '~> 5.0'
 pod "ESPullToRefresh"
+pod 'SwiftLint'
+pod 'IQKeyboardManagerSwift'
   # Pods for TestNABWeather
 
   target 'TestNABWeatherTests' do

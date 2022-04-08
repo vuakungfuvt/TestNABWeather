@@ -27,11 +27,10 @@ enum MainWeather: String {
 
 // MARK: - CityEntity
 struct CityEntity: Codable {
-    let city: City
-    let cod: String
-    let message: Double
-    let cnt: Int
-    let list: [ListWeather]
+    let city: City?
+    let cod: String?
+    let cnt: Int?
+    let list: [ListWeather]?
     
 }
 

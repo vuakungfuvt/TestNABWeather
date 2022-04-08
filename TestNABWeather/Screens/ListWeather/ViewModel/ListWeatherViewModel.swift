@@ -52,6 +52,9 @@ class ListWeatherViewModel: NSObject {
             case .success(let city):
                 self.fetchData(city: city)
                 Configuration.shared.saveCity(city: city)
+                if city.cod == "404" {
+                    self.loadErrorContent?("city not found")
+                }
             case .failure(let error):
                 self.loadErrorContent?(error.localizedDescription)
             }
@@ -61,7 +64,7 @@ class ListWeatherViewModel: NSObject {
     
     func fetchData(city: CityEntity) {
         var viewModels = [ItemWeatherCellViewModel]()
-        city.list.forEach {
+        city.list?.forEach {
             let vm = createCellViewModel(listWeather: $0)
             viewModels.append(vm)
         }

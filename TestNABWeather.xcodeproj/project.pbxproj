@@ -76,6 +76,7 @@
 		30E0486127F6B355001E16AC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E0486027F6B355001E16AC /* Configuration.swift */; };
 		30E0486327F6D1F6001E16AC /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E0486227F6D1F6001E16AC /* UIFont+Extension.swift */; };
 		30E0486527F6EA6B001E16AC /* ListWeatherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E0486427F6EA6B001E16AC /* ListWeatherTest.swift */; };
+		30FE61A428001FB700ADB4AC /* NABViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FE61A328001FB700ADB4AC /* NABViewControllerViewModel.swift */; };
 		DD98C7FA856410A11290A6B2 /* Pods_TestNABWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F57ADB4632068B40E9F114 /* Pods_TestNABWeather.framework */; };
 /* End PBXBuildFile section */
 
@@ -172,6 +173,7 @@
 		30E0486027F6B355001E16AC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		30E0486227F6D1F6001E16AC /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		30E0486427F6EA6B001E16AC /* ListWeatherTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWeatherTest.swift; sourceTree = "<group>"; };
+		30FE61A328001FB700ADB4AC /* NABViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NABViewControllerViewModel.swift; sourceTree = "<group>"; };
 		4BE4E71832A6310661220D53 /* Pods-TestNABWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestNABWeather.release.xcconfig"; path = "Target Support Files/Pods-TestNABWeather/Pods-TestNABWeather.release.xcconfig"; sourceTree = "<group>"; };
 		4DD8417C32EEA7334299D47F /* Pods-TestNABWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestNABWeather.debug.xcconfig"; path = "Target Support Files/Pods-TestNABWeather/Pods-TestNABWeather.debug.xcconfig"; sourceTree = "<group>"; };
 		61318280302109ACF88BFFEA /* Pods_TestNABWeather_TestNABWeatherUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestNABWeather_TestNABWeatherUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -329,6 +331,7 @@
 				306AB8FC27F8557B00078C71 /* AlertCustom */,
 				30E0483F27F69528001E16AC /* Setting */,
 				30E0480127F5BB61001E16AC /* ListWeather */,
+				30FE61A328001FB700ADB4AC /* NABViewControllerViewModel.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -830,6 +833,7 @@
 				30E047F327F5B956001E16AC /* APIError.swift in Sources */,
 				30E047C827F5B842001E16AC /* UITableViewHeaderFooterView+Extension.swift in Sources */,
 				30E047CA27F5B842001E16AC /* UITableView+Extension.swift in Sources */,
+				30FE61A428001FB700ADB4AC /* NABViewControllerViewModel.swift in Sources */,
 				3034A81427F5B61100FC7A20 /* AppDelegate.swift in Sources */,
 				306AB8FB27F851A600078C71 /* UIImageView+Extension.swift in Sources */,
 				30E047FC27F5BA2A001E16AC /* NSMutableData+Extensions.swift in Sources */,

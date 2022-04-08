@@ -1,5 +1,5 @@
 //
-//  AlertCustomViewController.swift
+//  UIViewController+Extension.swift
 //  TestNABWeather
 //
 //  Created by tungphan on 02/04/2022.
@@ -281,5 +281,17 @@ extension UIViewController {
     
     func hideLoading() {
         MBProgressHUD.hide(for: self.view, animated: true)
+    }
+}
+
+extension UIViewController {
+    func animateConstraint(constraint: NSLayoutConstraint, newValueConstrant: CGFloat, time: TimeInterval, completion: @escaping (() -> Void)) {
+        self.view.layoutIfNeeded()
+        UIView.animate(withDuration: time) {
+            constraint.constant = newValueConstrant
+            self.view.layoutIfNeeded()
+        } completion: { _ in
+            completion()
+        }
     }
 }

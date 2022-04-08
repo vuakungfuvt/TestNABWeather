@@ -31,14 +31,9 @@ class AlertCustomViewController: UIViewController, XibViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        self.view.layoutIfNeeded()
-        UIView.animate(withDuration: 0.5) {
-            self.widthContentViewConstraint.constant = screenSize.width - 60
-            self.view.layoutIfNeeded()
-        } completion: { _ in
+        self.animateConstraint(constraint: self.widthContentViewConstraint, newValueConstrant: screenSize.width - 60, time: 0.5, completion: {
             
-        }
+        })
     }
     
     func setupView() {
@@ -53,13 +48,8 @@ class AlertCustomViewController: UIViewController, XibViewController {
     
     @IBAction func btnOKTouchUpInside(_ sender: Any) {
         self.view.layoutIfNeeded()
-        UIView.animate(withDuration: 0.5) {
-            self.widthContentViewConstraint.constant = 0
-            self.view.layoutIfNeeded()
-        } completion: { _ in
-            self.dismiss(animated: false) {
-                
-            }
-        }
+        self.animateConstraint(constraint: self.widthContentViewConstraint, newValueConstrant: 0, time: 0.5, completion: {
+            self.dismiss(animated: false) {}
+        })
     }
 }

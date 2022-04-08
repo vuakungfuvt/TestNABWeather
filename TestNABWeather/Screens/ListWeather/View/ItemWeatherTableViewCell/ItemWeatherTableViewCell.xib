@@ -22,25 +22,25 @@
                 <rect key="frame" x="0.0" y="0.0" width="533" height="161"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date: Thu, 10 Jun 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaL-iA-Zwq">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date: Thu, 10 Jun 2021" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaL-iA-Zwq">
                         <rect key="frame" x="10" y="12" width="156.5" height="25"/>
                         <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Pressure: 1021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afT-nP-ox9">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Pressure: 1021" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afT-nP-ox9">
                         <rect key="frame" x="10" y="73.5" width="102" height="20.5"/>
                         <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Humidity: 58%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNc-kR-6G6">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Humidity: 58%" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNc-kR-6G6">
                         <rect key="frame" x="10" y="102" width="100.5" height="20.5"/>
                         <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Description: few clouds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OQ-zZ-wC1">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Description: few clouds" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OQ-zZ-wC1">
                         <rect key="frame" x="10" y="130.5" width="156.5" height="20.5"/>
                         <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="15"/>
                         <nil key="textColor"/>
@@ -53,7 +53,7 @@
                             <constraint firstAttribute="height" constant="40" id="k3I-OQ-hbD"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aL7-HO-kns">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aL7-HO-kns">
                         <rect key="frame" x="10" y="45" width="172.5" height="20.5"/>
                         <string key="text" base64-UTF8="YES">
 QXZlcmFnZSBUbXBlcmF0dXJlOiAzEDBDA
@@ -66,15 +66,20 @@ QXZlcmFnZSBUbXBlcmF0dXJlOiAzEDBDA
                 <constraints>
                     <constraint firstItem="8OQ-zZ-wC1" firstAttribute="top" secondItem="eNc-kR-6G6" secondAttribute="bottom" constant="8" id="7gM-XH-nvO"/>
                     <constraint firstItem="afT-nP-ox9" firstAttribute="top" secondItem="aL7-HO-kns" secondAttribute="bottom" constant="8" id="Cou-gW-dw9"/>
+                    <constraint firstItem="CIR-AC-AC1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="afT-nP-ox9" secondAttribute="trailing" constant="10" id="Izi-HR-6ZF"/>
                     <constraint firstAttribute="bottom" secondItem="8OQ-zZ-wC1" secondAttribute="bottom" constant="10" id="JbF-Ii-V3e"/>
+                    <constraint firstItem="CIR-AC-AC1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jaL-iA-Zwq" secondAttribute="trailing" constant="10" id="Kzm-fR-Qm2"/>
                     <constraint firstItem="aL7-HO-kns" firstAttribute="top" secondItem="jaL-iA-Zwq" secondAttribute="bottom" constant="8" id="Qbq-Ud-zPr"/>
                     <constraint firstItem="8OQ-zZ-wC1" firstAttribute="leading" secondItem="eNc-kR-6G6" secondAttribute="leading" id="TsQ-JA-D4t"/>
+                    <constraint firstItem="CIR-AC-AC1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eNc-kR-6G6" secondAttribute="trailing" constant="10" id="awc-MH-iof"/>
+                    <constraint firstItem="CIR-AC-AC1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aL7-HO-kns" secondAttribute="trailing" constant="10" id="c1z-o0-hIA"/>
                     <constraint firstItem="aL7-HO-kns" firstAttribute="leading" secondItem="jaL-iA-Zwq" secondAttribute="leading" id="dgN-TJ-zUg"/>
                     <constraint firstItem="jaL-iA-Zwq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="jvv-et-1Y3"/>
                     <constraint firstItem="eNc-kR-6G6" firstAttribute="leading" secondItem="afT-nP-ox9" secondAttribute="leading" id="k8d-NY-fKv"/>
                     <constraint firstAttribute="trailing" secondItem="CIR-AC-AC1" secondAttribute="trailing" constant="20" id="kgZ-vX-vT8"/>
                     <constraint firstItem="jaL-iA-Zwq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="r9K-Fw-52y"/>
                     <constraint firstItem="afT-nP-ox9" firstAttribute="leading" secondItem="aL7-HO-kns" secondAttribute="leading" id="u53-Wt-Gg9"/>
+                    <constraint firstItem="CIR-AC-AC1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8OQ-zZ-wC1" secondAttribute="trailing" constant="10" id="wdp-PC-ahu"/>
                     <constraint firstItem="eNc-kR-6G6" firstAttribute="top" secondItem="afT-nP-ox9" secondAttribute="bottom" constant="8" id="yBG-pj-gUt"/>
                     <constraint firstItem="CIR-AC-AC1" firstAttribute="centerY" secondItem="afT-nP-ox9" secondAttribute="centerY" id="yoI-i7-V3G"/>
                 </constraints>

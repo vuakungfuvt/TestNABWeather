@@ -20,5 +20,5 @@ class ItemSelectTableViewCell: UITableViewCell {
             imvSelection.isHidden = !(cellViewModel?.isSelected ?? false)
         }
     }
-    static let heightCell: CGFloat = 35
+    static let height: CGFloat = 35
 }

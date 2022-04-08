@@ -11,7 +11,7 @@ class SelectListViewModel: NSObject {
     
     var currentItem: String = ""
     
-    var items: [String] = [] {
+    fileprivate var items: [String] = [] {
         didSet {
             loadAllItemCellViewModels()
         }

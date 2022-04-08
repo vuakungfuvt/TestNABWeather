@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 class ListWeatherViewController: UIViewController, XibViewController {
     
@@ -16,45 +17,19 @@ class ListWeatherViewController: UIViewController, XibViewController {
     @IBOutlet weak var btnSetting: UIButton!
     
     // MARK: - Variables
-    private var viewModel = ListWeatherViewModel()
-    var searchedString: String = ""
+    private var viewModel: ListWeatherViewModel!
+    fileprivate var searchedString: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
         initData()
-        setupViewModel()
+        bindViewModel()
     }
     
-    func setupView() {
-        self.navigationController?.isNavigationBarHidden = true
-        tableView.registerNibCellFor(type: ItemWeatherTableViewCell.self)
-        tableView.set(delegateAndDataSource: self)
-        tfSearch.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
-        tableView.addPullRefresh {
-            self.searchCity()
-        }
-    }
-    
-    func initData() {
-        viewModel.loadLocal()
-        tfSearch.text = "saigon"
-        self.searchedString = "saigon"
-        searchCity()
-    }
-    
-    func setupViewModel() {
-        viewModel.reloadDataTableView = { [weak self] in
-            self?.tableView.reloadData()
-            self?.tableView.pauseRefressh()
-            self?.hideLoading()
-        }
-        viewModel.loadErrorContent = { [weak self] errorContent in
-            self?.showError(errorContent: errorContent )
-            self?.tableView.pauseRefressh()
-            self?.hideLoading()
-        }
+    func setupViewModel(viewModel: ListWeatherViewModel) {
+        self.viewModel = viewModel
     }
     
     // MARK: - Actions
@@ -75,6 +50,7 @@ class ListWeatherViewController: UIViewController, XibViewController {
     
     @IBAction func btnSettingTouchUpInside(_ sender: Any) {
         let viewModel = SettingViewModel()
+        tfSearch.resignFirstResponder()
         SettingViewController.present(from: self, animated: false) { vc in
             vc.modalPresentationStyle = .overFullScreen
             vc.delegate = self
@@ -129,4 +105,37 @@ extension ListWeatherViewController: SettingViewControllerDelegate {
         self.viewModel.updateTempUnit(tempUnit: tempUnit)
     }
     
+}
+
+extension ListWeatherViewController: NABViewControllerViewModel {
+    func bindViewModel() {
+        viewModel.reloadDataTableView = { [weak self] in
+            self?.tableView.reloadData()
+            self?.tableView.pauseRefressh()
+            self?.hideLoading()
+        }
+        viewModel.loadErrorContent = { [weak self] errorContent in
+            self?.showError(errorContent: errorContent )
+            self?.tableView.pauseRefressh()
+            self?.hideLoading()
+        }
+    }
+    
+    func setupView() {
+        self.navigationController?.isNavigationBarHidden = true
+        tableView.registerNibCellFor(type: ItemWeatherTableViewCell.self)
+        tableView.set(delegateAndDataSource: self)
+        tfSearch.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        tableView.addPullRefresh {
+            self.searchCity()
+        }
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+    }
+    
+    func initData() {
+        viewModel.loadLocal()
+        tfSearch.text = "saigon"
+        self.searchedString = "saigon"
+        searchCity()
+    }
 }
