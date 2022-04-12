@@ -40,10 +40,10 @@ class ListWeatherViewController: UIViewController, XibViewController {
     }
     
     @objc func textFieldDidChange(textField: UITextField) {
-        searchedString = textField.text ?? ""
-        guard searchedString.count >= 3 else {
+        guard let text = textField.text else {
             return
         }
+        searchedString = text
         NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(searchCity), object: nil)
         perform(#selector(searchCity), with: nil, afterDelay: 1)
     }
@@ -64,7 +64,9 @@ class ListWeatherViewController: UIViewController, XibViewController {
     
     @objc func searchCity() {
         viewModel.getCityEntity(q: searchedString)
-        self.showLoading()
+        if viewModel.isLoading {
+            self.showLoading()
+        }
     }
 
 }

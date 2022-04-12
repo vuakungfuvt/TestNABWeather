@@ -43,6 +43,11 @@ class ListWeatherViewModel: NSObject {
     
     func getCityEntity(q: String) {
         searchedString = q
+        guard searchedString.count >= 3 else {
+            Configuration.shared.saveCity(city: nil)
+            fetchData(city: nil)
+            return
+        }
         let cnt: Int = Configuration.shared.setting.countDay
         let unit: UnitTemp = UnitTemp(rawValue: Configuration.shared.setting.unitTemp) ?? .Celsius
         self.isLoading = true
@@ -62,9 +67,9 @@ class ListWeatherViewModel: NSObject {
         operationQueue.addOperation(operation)
     }
     
-    func fetchData(city: CityEntity) {
+    func fetchData(city: CityEntity?) {
         var viewModels = [ItemWeatherCellViewModel]()
-        city.list?.forEach {
+        city?.list?.forEach {
             let vm = createCellViewModel(listWeather: $0)
             viewModels.append(vm)
         }

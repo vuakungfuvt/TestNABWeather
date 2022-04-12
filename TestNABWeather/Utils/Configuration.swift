@@ -44,7 +44,7 @@ class Configuration: NSObject {
         return nil
     }
     
-    func saveCity(city: CityEntity) {
+    func saveCity(city: CityEntity?) {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(city) {
             UserDefaults.standard.set(encoded, forKey: cityEntityKey)

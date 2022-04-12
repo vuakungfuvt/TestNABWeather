@@ -79,6 +79,7 @@
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                             <real key="value" value="8"/>
                         </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="viewAlert"/>
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>

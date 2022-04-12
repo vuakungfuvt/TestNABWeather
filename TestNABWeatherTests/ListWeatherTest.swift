@@ -57,7 +57,7 @@ class ListWeatherTest: XCTestCase {
         viewModel.updateFetchingCity = { [weak viewModel] in
             let indexPath = IndexPath(row: 1, section: 0)
             let cellVM = viewModel?.getCellViewModel(at: indexPath)
-            XCTAssertEqual(cellVM?.description, viewModel?.city?.list[indexPath.row].weather.first?.weatherDescription)
+            XCTAssertEqual(cellVM?.description, viewModel?.city?.list?[indexPath.row].weather.first?.weatherDescription)
             expect.fulfill()
         }
         viewModel.getCityEntity(q: "saigon")
@@ -70,20 +70,20 @@ class ListWeatherTest: XCTestCase {
         Configuration.shared.setting.countDay = count
         let expect = XCTestExpectation(description: "Loading status updated")
         viewModel.updateFetchingCity = { [weak viewModel] in
-            for index in 0 ..< (viewModel?.city?.list.count ?? 0) {
+            for index in 0 ..< (viewModel?.city?.list?.count ?? 0) {
                 let indexPath = IndexPath(row: index, section: 0)
                 let cellVM = viewModel?.getCellViewModel(at: indexPath)
                 let dt = (cellVM?.date.millisecondsSince1970 ?? 0) / 1000
-                XCTAssertEqual(Int(dt), viewModel?.city?.list[indexPath.row].dt)
+                XCTAssertEqual(Int(dt), viewModel?.city?.list?[indexPath.row].dt)
                 
-                let temp = viewModel?.city?.list[indexPath.row].temp.getAveragerTemp() ?? 0
+                let temp = viewModel?.city?.list?[indexPath.row].temp.getAveragerTemp() ?? 0
                 XCTAssertEqual(cellVM?.averageTemp, Int(temp))
                 
-                XCTAssertEqual(cellVM?.humidity, viewModel?.city?.list[indexPath.row].humidity)
+                XCTAssertEqual(cellVM?.humidity, viewModel?.city?.list?[indexPath.row].humidity)
                 
-                XCTAssertEqual(cellVM?.description, viewModel?.city?.list[indexPath.row].weather.first?.weatherDescription)
+                XCTAssertEqual(cellVM?.description, viewModel?.city?.list?[indexPath.row].weather.first?.weatherDescription)
                 
-                let icon = viewModel?.city?.list[indexPath.row].weather.first?.icon ?? "10d"
+                let icon = viewModel?.city?.list?[indexPath.row].weather.first?.icon ?? "10d"
                 let imageUrl = "http://openweathermap.org/img/w/\(icon).png"
                 XCTAssertEqual(cellVM?.imageUrl, imageUrl)
                 

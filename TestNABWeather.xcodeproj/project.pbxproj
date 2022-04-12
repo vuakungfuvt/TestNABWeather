@@ -14,12 +14,14 @@
 		3034A81D27F5B61200FC7A20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3034A81C27F5B61200FC7A20 /* Assets.xcassets */; };
 		3034A82027F5B61200FC7A20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3034A81E27F5B61200FC7A20 /* LaunchScreen.storyboard */; };
 		3034A82B27F5B61200FC7A20 /* TestNABWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3034A82A27F5B61200FC7A20 /* TestNABWeatherTests.swift */; };
-		3034A83627F5B61200FC7A20 /* TestNABWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3034A83527F5B61200FC7A20 /* TestNABWeatherUITests.swift */; };
+		3034A83627F5B61200FC7A20 /* TestNABWeatherListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3034A83527F5B61200FC7A20 /* TestNABWeatherListUITests.swift */; };
 		306AB8FA27F851A600078C71 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB8F827F851A500078C71 /* UIImage+Extension.swift */; };
 		306AB8FB27F851A600078C71 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB8F927F851A500078C71 /* UIImageView+Extension.swift */; };
 		306AB90127F855DF00078C71 /* AlertCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB8FF27F855DF00078C71 /* AlertCustomViewController.swift */; };
 		306AB90227F855DF00078C71 /* AlertCustomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 306AB90027F855DF00078C71 /* AlertCustomViewController.xib */; };
 		308C26E527F858F100379D10 /* AlertCustomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C26E427F858F100379D10 /* AlertCustomViewModel.swift */; };
+		309076AC280519A700F9E559 /* SettingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309076AB280519A700F9E559 /* SettingTest.swift */; };
+		309076AE2805317800F9E559 /* ConfigurationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309076AD2805317800F9E559 /* ConfigurationTest.swift */; };
 		30E047C827F5B842001E16AC /* UITableViewHeaderFooterView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E047C527F5B842001E16AC /* UITableViewHeaderFooterView+Extension.swift */; };
 		30E047C927F5B842001E16AC /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E047C627F5B842001E16AC /* UITableViewCell+Extension.swift */; };
 		30E047CA27F5B842001E16AC /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E047C727F5B842001E16AC /* UITableView+Extension.swift */; };
@@ -110,13 +112,15 @@
 		3034A82A27F5B61200FC7A20 /* TestNABWeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNABWeatherTests.swift; sourceTree = "<group>"; };
 		3034A82C27F5B61200FC7A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3034A83127F5B61200FC7A20 /* TestNABWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestNABWeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3034A83527F5B61200FC7A20 /* TestNABWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNABWeatherUITests.swift; sourceTree = "<group>"; };
+		3034A83527F5B61200FC7A20 /* TestNABWeatherListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNABWeatherListUITests.swift; sourceTree = "<group>"; };
 		3034A83727F5B61200FC7A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		306AB8F827F851A500078C71 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		306AB8F927F851A500078C71 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		306AB8FF27F855DF00078C71 /* AlertCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCustomViewController.swift; sourceTree = "<group>"; };
 		306AB90027F855DF00078C71 /* AlertCustomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertCustomViewController.xib; sourceTree = "<group>"; };
 		308C26E427F858F100379D10 /* AlertCustomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCustomViewModel.swift; sourceTree = "<group>"; };
+		309076AB280519A700F9E559 /* SettingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTest.swift; sourceTree = "<group>"; };
+		309076AD2805317800F9E559 /* ConfigurationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationTest.swift; sourceTree = "<group>"; };
 		30E047C527F5B842001E16AC /* UITableViewHeaderFooterView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+Extension.swift"; sourceTree = "<group>"; };
 		30E047C627F5B842001E16AC /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		30E047C727F5B842001E16AC /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
@@ -251,10 +255,10 @@
 				30E047CE27F5B956001E16AC /* Services */,
 				30E047CD27F5B926001E16AC /* Screens */,
 				30E047C427F5B7F6001E16AC /* Extension */,
-				3034A81327F5B61100FC7A20 /* AppDelegate.swift */,
 				3034A81927F5B61100FC7A20 /* Main.storyboard */,
 				3034A81C27F5B61200FC7A20 /* Assets.xcassets */,
 				3034A81E27F5B61200FC7A20 /* LaunchScreen.storyboard */,
+				3034A81327F5B61100FC7A20 /* AppDelegate.swift */,
 				3034A82127F5B61200FC7A20 /* Info.plist */,
 			);
 			path = TestNABWeather;
@@ -263,9 +267,11 @@
 		3034A82927F5B61200FC7A20 /* TestNABWeatherTests */ = {
 			isa = PBXGroup;
 			children = (
+				309076AB280519A700F9E559 /* SettingTest.swift */,
 				3034A82A27F5B61200FC7A20 /* TestNABWeatherTests.swift */,
 				3034A82C27F5B61200FC7A20 /* Info.plist */,
 				30E0486427F6EA6B001E16AC /* ListWeatherTest.swift */,
+				309076AD2805317800F9E559 /* ConfigurationTest.swift */,
 			);
 			path = TestNABWeatherTests;
 			sourceTree = "<group>";
@@ -273,7 +279,7 @@
 		3034A83427F5B61200FC7A20 /* TestNABWeatherUITests */ = {
 			isa = PBXGroup;
 			children = (
-				3034A83527F5B61200FC7A20 /* TestNABWeatherUITests.swift */,
+				3034A83527F5B61200FC7A20 /* TestNABWeatherListUITests.swift */,
 				3034A83727F5B61200FC7A20 /* Info.plist */,
 			);
 			path = TestNABWeatherUITests;
@@ -866,6 +872,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				30E0486527F6EA6B001E16AC /* ListWeatherTest.swift in Sources */,
+				309076AC280519A700F9E559 /* SettingTest.swift in Sources */,
+				309076AE2805317800F9E559 /* ConfigurationTest.swift in Sources */,
 				3034A82B27F5B61200FC7A20 /* TestNABWeatherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -874,7 +882,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3034A83627F5B61200FC7A20 /* TestNABWeatherUITests.swift in Sources */,
+				3034A83627F5B61200FC7A20 /* TestNABWeatherListUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
