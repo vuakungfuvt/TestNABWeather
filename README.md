@@ -8,15 +8,6 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 # TestNABWeather
-<br />
-<p align="center">
-  <a href="https://github.com/alexanderritik/Best-README-Template">
-    <img src="logo.jpeg" alt="Logo" width="80" height="80">
-  </a>
-  <p align="center">
-    One to two paragraph statement about your product and what it does.
-  </p>
-</p>
 
 <p align="row">
 <img src= "images/app-demo.gif" width="400" >
@@ -33,6 +24,57 @@
 ## Software development princibles:
 
 Follow by SOLID (define the protocol to init ViewController followed by MVVM structure)
+
+## Structure:
+- [x] Utils: Some common functions.
+        +Configuration.swift: including some funtions to save and get local data
+        +Constant.swift: Store some constant
+- [x] Font: Folder of font source
+- [x] Service: Networking service.
+        +RequestBuilder.swift, SessionBuilder.swift: Store some protocol to define the full api resful service.
+        +Networkingable: The typealias of request and responsed file
+        +When calling 1 api, we will define in Operation folder and implement BaseOperation<GenericModelType>, inside each file we have the method, parameters and the response type.
+- [x] Screens: ViewController followed by MVVM.
+<img src= "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbenoitpasquier.com%2Fios-swift-mvvm-pattern%2F&psig=AOvVaw0jKj95YK8816-_JvHEu-09&ust=1649911832654000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCJib8MKgkPcCFQAAAAAdAAAAABAI" width="400" >
+        +When init of 1 viewController, the view has the reponsibiity to setup the view. All of the logic handlecd inside the viewModels class(private attributes), and the view has get the data from the viewModel to show off to the User.
+- [x] Extensions: Some extensions of classes.
+- [x] TestNABWeatherTest: The Test of ViewModel
+- [x] TestNABWeatherUITestsZ: The Test of UI
+
+## Libraries in Pods:
+- [x] Kingfisher: Load uiimageview from online
+- [x] MBProgressHUD: Show progress loading
+- [x] Alamofire: Load restfull API
+- [x] ESPullToRefresh: Pull to refresh of UITableView.
+- [x] IQKeyboardManagerSwift: handle keyboard event
+
+## How to run this project
+
+-  Download this project from develop branch and run, to change some config, go to setting screen from setting button in the top of uinavigation bar.
+-  To check Error handle, change value from 30 to 0.1 in SessionBuilder file a below:
+        config.timeoutIntervalForRequest = 0.1
+        config.timeoutIntervalForResource = 0.1
+        
+## Checklist
+        
+- [x] Programming language: Swift is required, Objective-C is optional.
+- [x] Design app's architecture (recommend VIPER or MVP, MVVM but not mandatory)
+- [x] UI should be looks like in attachment.
+- [x] Write UnitTests
+- [x] Acceptance Tests
+- [x] Exception handling
+- [x] Caching handling
+- [x] Accessibility for Disability Supports:
+    b. Scaling Text: Display size and font size: To change the size of items on your
+screen, adjust the display size or font size.
+- [x] Readme file includes:
+    c. Brief explanation for the software development principles, patterns & practices
+being applied
+    d. Brief explanation for the code folder structure and the key Objective-C/Swift
+libraries and frameworks being used
+    e. All the required steps in order to get the application run on local computer
+    f. Checklist of items the candidate has done.
+
 
 ## Requirements
 
