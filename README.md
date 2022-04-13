@@ -1,29 +1,97 @@
+
+[![Swift Version][swift-image]][swift-url]
+[![Build Status][travis-image]][travis-url]
+[![License][license-image]][license-url]
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)  
+[![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
 # TestNABWeather
-1. Software development princibles: Follow by SOLID (define the protocol to init ViewController followed by MVVM structure)
-2. Pattern: Singleton, FactoryPattern.
-3. Follow by MVVM.
-4. Structure:
-    a.Utils: Some common functions.
-        +Configuration.swift: including some funtions to save and get local data
-        +Constant.swift: Store some constant
-    b.Font: Folder of font source
-    c.Service: Networking service.
-        +RequestBuilder.swift, SessionBuilder.swift: Store some protocol to define the full api resful service.
-        +Networkingable: The typealias of request and responsed file
-        +When calling 1 api, we will define in Operation folder and implement BaseOperation<GenericModelType>, inside each file we have the method, parameters and the response type.
-    d.Screens: ViewController followed by MVVM.
-        +When init of 1 viewController, the view has the reponsibiity to setup the view. All of the logic handlecd inside the viewModels class(private attributes), and the view has get the data from the viewModel to show off to the User.
-    e.Extensions: Some extensions of classes.
-    f.TestNABWeatherTest: The Test of ViewModel
-    g.TestNABWeatherUITestsZ: The Test of UI
-5. Libraries in Pods:
-    -  Kingfisher: Load uiimageview from online
-    -  MBProgressHUD: Show progress loading
-    -  Alamofire: Load restfull API
-    -  ESPullToRefresh: Pull to refresh of UITableView.
-    -  IQKeyboardManagerSwift: handle keyboard event
-6. Step: Download this project from develop branch and run, to change some config, go to setting screen from setting button in the top of uinavigation bar.
-7. To check Error handle, change value from 30 to 0.1 in SessionBuilder file a below:
-        config.timeoutIntervalForRequest = 0.1
-        config.timeoutIntervalForResource = 0.1
-8. Check list done: 1, 2, 3, 4, 5, 6, 7, 8a, 10. 
+<br />
+<p align="center">
+  <a href="https://github.com/alexanderritik/Best-README-Template">
+    <img src="logo.jpeg" alt="Logo" width="80" height="80">
+  </a>
+  <p align="center">
+    One to two paragraph statement about your product and what it does.
+  </p>
+</p>
+
+<p align="row">
+<img src= "https://www.dropbox.com/s/04w47wy66hekvgr/app-demo.gif?dl=0" width="400" >
+</p>
+
+## Features
+
+- [x] List Weather search by API
+- [x] Search city by name
+- [x] Setting font size
+- [x] Setting celious to display
+- [x] Setting number of day to search
+
+## Software development princibles:
+
+Follow by SOLID (define the protocol to init ViewController followed by MVVM structure)
+
+## Requirements
+
+- iOS 11.0+
+- Xcode 13
+
+## Installation
+
+#### CocoaPods
+You can use [CocoaPods](http://cocoapods.org/) to install `YourLibrary` by adding it to your `Podfile`:
+
+```ruby
+platform :ios, '8.0'
+use_frameworks!
+pod 'YourLibrary'
+```
+
+To get the full benefits import `YourLibrary` wherever you import UIKit
+
+``` swift
+import UIKit
+import YourLibrary
+```
+#### Carthage
+Create a `Cartfile` that lists the framework and run `carthage update`. Follow the [instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios) to add `$(SRCROOT)/Carthage/Build/iOS/YourLibrary.framework` to an iOS project.
+
+```
+github "yourUsername/yourlibrary"
+```
+#### Manually
+1. Download and drop ```YourLibrary.swift``` in your project.  
+2. Congratulations!  
+
+## Usage example
+
+```swift
+import EZSwiftExtensions
+ez.detectScreenShot { () -> () in
+    print("User took a screen shot")
+}
+```
+
+## Contribute
+
+We would love you for the contribution to **YourLibraryName**, check the ``LICENSE`` file for more info.
+
+## Meta
+
+Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+
+Distributed under the XYZ license. See ``LICENSE`` for more information.
+
+[https://github.com/yourname/github-link](https://github.com/dbader/)
+
+[swift-image]:https://img.shields.io/badge/swift-3.0-orange.svg
+[swift-url]: https://swift.org/
+[license-image]: https://img.shields.io/badge/License-MIT-blue.svg
+[license-url]: LICENSE
+[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
+[codebeat-image]: https://codebeat.co/badges/c19b47ea-2f9d-45df-8458-b2d952fe9dad
+[codebeat-url]: https://codebeat.co/projects/github-com-vsouza-awesomeios-com
