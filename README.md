@@ -51,10 +51,14 @@ Follow by SOLID (define the protocol to init ViewController followed by MVVM str
 - [x] TestNABWeatherUITestsZ: The Test of UI
 
 ## Libraries in Pods:
-[Kingfisher](https://github.com/onevcat/Kingfisher)
+[Kingfisher](https://github.com/onevcat/Kingfisher): Load uiimageview from online
+
 [MBProgressHUD](https://github.com/jdg/MBProgressHUD): Show progress loading
+
 [Alamofire](https://github.com/Alamofire/Alamofire): Load restfull API
+
 [ESPullToRefresh](https://github.com/eggswift/pull-to-refresh): Pull to refresh of UITableView.
+
 [IQKeyboardManagerSwift](https://github.com/hackiftekhar/IQKeyboardManager): handle keyboard event
 
 ## How to run this project
