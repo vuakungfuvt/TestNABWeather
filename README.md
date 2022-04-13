@@ -26,6 +26,9 @@
 Follow by SOLID (define the protocol to init ViewController followed by MVVM structure)
 
 ## Structure:
+
+<img src= "images/structure.png" width="400" >
+
 - [x] Utils: Some common functions.
         +Configuration.swift: including some funtions to save and get local data
         +Constant.swift: Store some constant
@@ -35,18 +38,24 @@ Follow by SOLID (define the protocol to init ViewController followed by MVVM str
         +Networkingable: The typealias of request and responsed file
         +When calling 1 api, we will define in Operation folder and implement BaseOperation<GenericModelType>, inside each file we have the method, parameters and the response type.
 - [x] Screens: ViewController followed by MVVM.
-<img src= "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbenoitpasquier.com%2Fios-swift-mvvm-pattern%2F&psig=AOvVaw0jKj95YK8816-_JvHEu-09&ust=1649911832654000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCJib8MKgkPcCFQAAAAAdAAAAABAI" width="400" >
-        +When init of 1 viewController, the view has the reponsibiity to setup the view. All of the logic handlecd inside the viewModels class(private attributes), and the view has get the data from the viewModel to show off to the User.
+
+<img src= "images/mvvm.jpeg" width="400" >
+
+    Model-View-ViewModel (MVVM) is a structural design pattern that separates objects into three distinct groups:
+
+    - Models hold application data. They’re usually structs or simple classes.
+    - Views display visual elements and controls on the screen. They’re typically subclasses of UIView.
+    - View models transform model information into values that can be displayed on a view. They’re usually classes, so they can be passed around as references.
 - [x] Extensions: Some extensions of classes.
 - [x] TestNABWeatherTest: The Test of ViewModel
 - [x] TestNABWeatherUITestsZ: The Test of UI
 
 ## Libraries in Pods:
-- [x] Kingfisher: Load uiimageview from online
-- [x] MBProgressHUD: Show progress loading
-- [x] Alamofire: Load restfull API
-- [x] ESPullToRefresh: Pull to refresh of UITableView.
-- [x] IQKeyboardManagerSwift: handle keyboard event
+    [Kingfisher](https://github.com/onevcat/Kingfisher): Load uiimageview from online
+    [MBProgressHUD](https://github.com/jdg/MBProgressHUD): Show progress loading
+    [Alamofire](https://github.com/Alamofire/Alamofire): Load restfull API
+    [ESPullToRefresh](https://github.com/eggswift/pull-to-refresh): Pull to refresh of UITableView.
+    [IQKeyboardManagerSwift](https://github.com/hackiftekhar/IQKeyboardManager): handle keyboard event
 
 ## How to run this project
 
@@ -87,7 +96,7 @@ libraries and frameworks being used
 You can use [CocoaPods](http://cocoapods.org/) to install `YourLibrary` by adding it to your `Podfile`:
 
 ```ruby
-platform :ios, '8.0'
+platform :ios, '11.0'
 use_frameworks!
 pod 'YourLibrary'
 ```
@@ -108,26 +117,15 @@ github "yourUsername/yourlibrary"
 1. Download and drop ```YourLibrary.swift``` in your project.  
 2. Congratulations!  
 
-## Usage example
-
-```swift
-import EZSwiftExtensions
-ez.detectScreenShot { () -> () in
-    print("User took a screen shot")
-}
-```
-
 ## Contribute
 
-We would love you for the contribution to **YourLibraryName**, check the ``LICENSE`` file for more info.
+We would love you for the contribution of my code to be more clear in the future
 
 ## Meta
 
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+Your Name – [@TungPhan](https://www.facebook.com/tung.teotop/) – phanthanhtung.pt@gmail.com
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
-
-[https://github.com/yourname/github-link](https://github.com/dbader/)
+[https://github.com/vuakungfuvt/TestNABWeather](https://github.com/vuakungfuvt/TestNABWeather)
 
 [swift-image]:https://img.shields.io/badge/swift-3.0-orange.svg
 [swift-url]: https://swift.org/
