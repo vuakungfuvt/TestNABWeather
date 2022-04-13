@@ -19,7 +19,7 @@
 </p>
 
 <p align="row">
-<img src= "https://dl.dropbox.com/s/04w47wy66hekvgr/app-demo.gif?dl=0" width="400" >
+<img src= "images/app-demo.gif" width="400" >
 </p>
 
 ## Features
